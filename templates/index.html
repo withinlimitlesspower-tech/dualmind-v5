@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <h2>AI Code Manager</h2>
+            <div id="session-list"></div>
+            <button class="new-session-btn">+ New Session</button>
+        </div>
+        <div class="chat-area">
+            <div class="chat-header">
+                <h3>Chat</h3>
+                <button id="push-btn">Push to GitHub</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message assistant">Welcome! Create a new session and start chatting. Ask me to generate code or push to GitHub.</div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="message-input" placeholder="Type your message..." autofocus>
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for repo name -->
+    <div class="modal" id="repo-modal">
+        <div class="modal-content">
+            <h3>Push to GitHub</h3>
+            <input type="text" id="repo-name" placeholder="Repository name">
+            <button onclick="confirmPush()">Push</button>
+            <button onclick="document.getElementById('repo-modal').style.display='none'">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
