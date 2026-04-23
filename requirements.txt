@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+httpx
+sqlalchemy
+aiosqlite
+python-dotenv
+jinja2
+PyGithub
